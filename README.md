@@ -38,7 +38,7 @@
 <br>
 
 <table style="caption-side: top">
-<caption>Operations on the user ressources </caption>
+<caption>Operations on the user resources </caption>
 <tr>
     <th>URI</th>
     <th>Method</th>
