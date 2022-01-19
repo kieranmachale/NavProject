@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const server = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // cors settings
 let corsOptions = {
@@ -9,13 +9,14 @@ let corsOptions = {
 }
 server.use(cors(corsOptions));
 
-server.get("/test", (req, res) => {
-    res.send('Hello JSFiddle!').status(200);
+// Endpoint to check server is active
+server.get("/", cors(), (req, res) => {
+    res.json('Server is running!').status(200);
 })
 
 /* Start server */
 server.listen(port, () => {
-    console.log(`Server running on port: ${port}`);
+    console.log(`Server running on port: ${PORT}`);
 });
 
 module.exports = server;
